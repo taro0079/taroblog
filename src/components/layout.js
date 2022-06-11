@@ -1,4 +1,5 @@
 import * as React from "react"
+import "@fontsource/noto-sans-jp"
 import { Link } from "gatsby"
 
 const Layout = ({ location, title, children }) => {
@@ -9,12 +10,14 @@ const Layout = ({ location, title, children }) => {
   if (isRootPath) {
     header = (
       <h1 className="main-heading">
-        <Link to="/">{title}</Link>
+        <Link to="/" className="text-5xl font-bold">
+          {title}
+        </Link>
       </h1>
     )
   } else {
     header = (
-      <Link className="header-link-home" to="/">
+      <Link className="header-link-home text-3xl" to="/">
         {title}
       </Link>
     )
