@@ -3,7 +3,7 @@ module.exports = {
     title: `Stoichiometries`,
     author: {
       name: `Taro Morita`,
-      summary: `Nb3Sn超伝導体を研究。博士後期課程3年`,
+      summary: `Railsエンジニアとして働いています。博士(工学)。超伝導について研究していました。`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,

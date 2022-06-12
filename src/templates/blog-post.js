@@ -22,10 +22,10 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <header className="my-10">
-          <h1 itemProp="headline" className="text-4xl font-bold">
+          <h1 itemProp="headline" className="text-2xl lg:text-4xl font-bold ">
             {post.frontmatter.title}
           </h1>
-          <p>{post.frontmatter.date}</p>
+          <p className="lg:text-2xl">{post.frontmatter.date}</p>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}

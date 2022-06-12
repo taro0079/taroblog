@@ -345,3 +345,7 @@ a:focus {
     list-style-position: inside;
   }
 }
+
+code.pre {
+  white-space: pre;
+}
