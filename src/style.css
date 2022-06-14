@@ -325,6 +325,21 @@ a:focus {
   font-weight: bold;
 }
 
+.blog-post section p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.gatsby-resp-image-wrapper {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.blog-post section img {
+  border-radius: 10px;
+  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+}
+
 .blog-post-nav ul {
   margin: var(--spacing-0);
 }
