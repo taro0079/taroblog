@@ -330,14 +330,22 @@ a:focus {
   margin-bottom: 10px;
 }
 .gatsby-resp-image-wrapper {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .blog-post section img {
   border-radius: 10px;
   filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
     drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.blog-post section a {
+  color: rgb(14 165 233);
+  font-weight: 700;
+  text-decoration-line: underline;
 }
 
 .blog-post-nav ul {
