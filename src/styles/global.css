@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+li {
+    list-style-type:square;
+    list-style-position:inside;
+    text-indent: -1em;
+    @apply ml-10
+}
+ol>li {
+    list-style-type: decimal;
+    list-style-position:inside;
+    text-indent: -1em;
+    @apply ml-10
+}
+
+@layer base {
+    h1 {
+    @apply text-2xl;
+    @apply py-4;
+}
+h2 {
+    @apply text-xl;
+    @apply py-2
+}
+}
