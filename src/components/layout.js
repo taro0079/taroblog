@@ -33,6 +33,8 @@ const Layout = ({ location, title, children }) => {
         Taro Morita
       </footer>
     </div>
+
+
   )
 }
 

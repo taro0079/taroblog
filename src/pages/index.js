@@ -27,14 +27,14 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
       <Bio />
-      <ol style={{ listStyle: `none` }}>
+      <div style={{ listStyle: `none` }} className="flex flex-wrap">
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
 
           return (
-            <li key={post.fields.slug}>
+            <li key={post.fields.slug} className="w-full md:w-1/2 p-4">
               <article
-                className="post-list-item rounded-lg p-8 shadow-lg"
+                className="h-60 post-list-item rounded-lg p-8 shadow-lg items-center"
                 itemScope
                 itemType="http://schema.org/Article"
               >
@@ -58,7 +58,7 @@ const BlogIndex = ({ data, location }) => {
             </li>
           )
         })}
-      </ol>
+      </div>
     </Layout>
   )
 }
