@@ -1,9 +1,9 @@
-import * as React from "react"
-import { Link, graphql } from "gatsby"
+import * as React from 'react'
+import { Link, graphql } from 'gatsby'
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Bio from '../components/bio'
+import Layout from '../components/layout'
+import Seo from '../components/seo'
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -32,7 +32,10 @@ const BlogIndex = ({ data, location }) => {
           const title = post.frontmatter.title || post.fields.slug
 
           return (
-            <li key={post.fields.slug} className="w-full md:w-1/2 p-4">
+            <li
+              key={post.fields.slug}
+              className="w-full md:w-1/2 p-4 hover:scale-105 ease-in-out duration-300"
+            >
               <article
                 className="h-60 post-list-item rounded-lg p-8 shadow-lg items-center"
                 itemScope
@@ -49,7 +52,7 @@ const BlogIndex = ({ data, location }) => {
                 <section>
                   <div
                     dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
+                      __html: post.frontmatter.description || post.excerpt
                     }}
                     itemProp="description"
                   />
