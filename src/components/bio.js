@@ -5,10 +5,10 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import * as React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
-import { GithubButton } from './githubButton'
+import * as React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
+import { GithubButton } from "./githubButton"
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -32,12 +32,12 @@ const Bio = () => {
 
   return (
     <div>
-      <div className="bio bg-blue-50 p-10 rounded-lg">
-        <div className="w-full flex">
+      <div className="bio bio-color p-8 rounded-lg flex flex-col">
+        <div className="md:w-full flex flex-col">
           <StaticImage
-            className="bio-avatar"
+            className="bio-avatar my-2"
             layout="fixed"
-            formats={['AUTO', 'WEBP', 'AVIF']}
+            formats={["AUTO", "WEBP", "AVIF"]}
             src="../images/profile-pic.png"
             width={50}
             height={50}
@@ -45,14 +45,14 @@ const Bio = () => {
             alt="Profile picture"
           />
           {author?.name && (
-            <p>
+            <p className="bio-text text-xs md:text-sm my-2">
               Written by <strong>{author.name}</strong>
               {` `}
               <p>{author?.summary || null}</p>
             </p>
           )}
         </div>
-        <div>
+        <div className="my-2">
           <GithubButton />
         </div>
       </div>

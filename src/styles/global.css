@@ -2,27 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
- .blog-post li {
-    list-style-type:square;
-    list-style-position:inside;
-    text-indent: -1em;
-    @apply ml-10
+.blog-post li {
+  list-style-type: square;
+  list-style-position: inside;
+  text-indent: -1em;
+  @apply ml-10;
+  color: #f2e5e5;
 }
-.blog-post ol>li {
-    list-style-type: decimal;
-    list-style-position:inside;
-    text-indent: -1em;
-    @apply ml-10
+.blog-post ol > li {
+  list-style-type: decimal;
+  list-style-position: inside;
+  text-indent: -1em;
+  @apply ml-10;
+  color: #f2e5e5;
 }
 
 @layer base {
-    h1 {
+  h1 {
     @apply text-2xl;
     @apply py-4;
-    @apply pt-8;
-}
-h2 {
+  }
+  h2 {
     @apply text-xl;
-    @apply py-2
-}
+    @apply py-2;
+  }
 }

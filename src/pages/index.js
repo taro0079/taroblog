@@ -1,9 +1,9 @@
-import * as React from 'react'
-import { Link, graphql } from 'gatsby'
+import * as React from "react"
+import { Link, graphql } from "gatsby"
 
-import Bio from '../components/bio'
-import Layout from '../components/layout'
-import Seo from '../components/seo'
+import Bio from "../components/bio"
+import Layout from "../components/layout"
+import Seo from "../components/seo"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -27,37 +27,36 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
       <Bio />
-      <div style={{ listStyle: `none` }} className="flex flex-wrap">
+      <div
+        style={{ listStyle: `none` }}
+        className="flex flex-col justify-center items-center"
+      >
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
 
           return (
-            <li
-              key={post.fields.slug}
-              className="w-full md:w-1/2 p-4 hover:scale-105 ease-in-out duration-300"
-            >
-              <article
-                className="h-60 post-list-item rounded-lg p-8 shadow-lg items-center"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
+            <li key={post.fields.slug} className="w-full md:w-1/2 ">
+              <div className="post-list-item rounded-md p-6 items-center border">
                 <header>
-                  <h2 className="font-bold">
+                  <p className="text-base font-bold hover:underline decoration-2 post-title">
                     <Link to={post.fields.slug} itemProp="url">
                       <span itemProp="headline">{title}</span>
                     </Link>
-                  </h2>
-                  <small>{post.frontmatter.date}</small>
+                  </p>
+                  <small className="post-description">
+                    {post.frontmatter.date}
+                  </small>
                 </header>
                 <section>
                   <div
+                    className="text-xs md:text-sm post-description"
                     dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt
+                      __html: post.frontmatter.description || post.excerpt,
                     }}
                     itemProp="description"
                   />
                 </section>
-              </article>
+              </div>
             </li>
           )
         })}

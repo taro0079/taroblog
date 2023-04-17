@@ -27,9 +27,10 @@
   --spacing-20: 5rem;
   --spacing-24: 6rem;
   --spacing-32: 8rem;
-  --fontFamily-sans: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --fontFamily-sans: "Noto Sans JP", Montserrat, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
   --fontFamily-serif: "Merriweather", "Georgia", Cambria, "Times New Roman",
     Times, serif;
   --font-body: var(--fontFamily-serif);
@@ -74,6 +75,7 @@ html {
   line-height: var(--lineHeight-normal);
   font-size: var(--fontSize-root);
   -webkit-font-smoothing: antialiased;
+  background: #2b3a55;
   -moz-osx-font-smoothing: grayscale;
 }
 
@@ -262,14 +264,37 @@ a:focus {
   font-size: var(--fontSize-7);
   margin: 0;
 }
-
+.blog-text {
+  color: #ce7777;
+}
+.bio-color {
+  background: #ce7777;
+}
+.bio-text {
+  color: #e8c4c4;
+  font-weight: bold;
+}
+.post-title {
+  color: #2b3a55;
+}
 .post-list-item {
   margin-bottom: var(--spacing-8);
-  margin-top: var(--spacing-8);
+  margin-top: var(--spacing-4);
+  background: #e8c4c4;
 }
-
+.post-description {
+  color: #2b3a55;
+}
+.post-text {
+  color: #e8c4c4;
+}
 .post-list-item p {
   margin-bottom: var(--spacing-0);
+}
+.post-header {
+  background: #e8c4c4;
+  padding: var(--spacing-8) var(--spacing-8);
+  border-radius: 5px;
 }
 
 .post-list-item h2 {
@@ -319,16 +344,19 @@ a:focus {
   font-size: x-large;
   margin: 15px 0px 15px 0px;
   font-weight: bold;
+  color: #e8c4c4;
 }
 .blog-post section h2 {
   font-size: large;
   margin: 15px 0px 15px 0px;
   font-weight: bold;
+  color: #e8c4c4;
 }
 
 .blog-post section p {
   margin-top: 10px;
   margin-bottom: 10px;
+  color: #f2e5e5;
 }
 .gatsby-resp-image-wrapper {
   margin-top: 30px;
@@ -344,7 +372,7 @@ a:focus {
 }
 
 .blog-post section a {
-  color: rgb(14 165 233);
+  color: #e8c4c4;
   font-weight: 700;
   text-decoration-line: underline;
 }

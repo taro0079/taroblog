@@ -1,9 +1,9 @@
-import { StaticImage } from 'gatsby-plugin-image'
-import React from 'react'
+import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
 
 export const GithubButton = () => {
   return (
-    <a href="https://github.com/taro0079">
+    <a href="https://github.com/taro0079" className="flex">
       <StaticImage
         layout="fixed"
         width={30}

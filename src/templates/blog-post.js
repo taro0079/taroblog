@@ -21,11 +21,16 @@ const BlogPostTemplate = ({ data, location }) => {
         itemScope
         itemType="http://schema.org/Article"
       >
-        <header className="my-10">
-          <h1 itemProp="headline" className="text-2xl lg:text-4xl font-bold ">
+        <header className="my-10 post-header">
+          <h1
+            itemProp="headline"
+            className="blog-text text-2xl lg:text-3xl font-bold "
+          >
             {post.frontmatter.title}
           </h1>
-          <p className="lg:text-2xl">{post.frontmatter.date}</p>
+          <p className="post-description" style={{ fontSize: "16px" }}>
+            {post.frontmatter.date}
+          </p>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -49,14 +54,14 @@ const BlogPostTemplate = ({ data, location }) => {
         >
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
+              <Link to={previous.fields.slug} rel="prev" className="post-text">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
+              <Link to={next.fields.slug} rel="next" className="post-text">
                 {next.frontmatter.title} →
               </Link>
             )}
